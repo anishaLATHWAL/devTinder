@@ -4,9 +4,6 @@ const app = express(); // returns an application object app
 
 // Route handlers
 
-app.use("/test",(req,res)=>{
-    res.send("Hello from the server");
-})
 
 app.get("/user",(req,res)=>{
     res.send({ firstname : "Anisha", lastName : "Lathwal" })
@@ -18,6 +15,10 @@ app.post("/user",(req,res)=>{
 app.delete("/user",(req,res)=>{
     // save data to the database
     res.send("Deleted successfully")
+})
+
+app.use("/test",(req,res)=>{
+    res.send("Hello from the server");
 })
 
 // app.use("/hello",(req,res)=>{
